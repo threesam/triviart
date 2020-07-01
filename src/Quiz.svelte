@@ -4,7 +4,7 @@
   import Question from './Question.svelte'
   import Modal from './Modal.svelte'
 
-  import { score, category } from './store.js'
+  import { score } from './store.js'
 
   let quiz = getQuiz()
   let activeQuestion = 0
@@ -41,7 +41,7 @@
   }
 
   // reactive statement
-  $: if ($score > 4) {
+  $: if ($score > 0) {
     isModalOpen = true
   }
 
@@ -57,6 +57,19 @@
   .fade-wrapper {
     margin: -1rem;
     padding: 0;
+  }
+  h2 {
+    font-size: 4rem;
+    margin: 0 0 0.5rem 0;
+  }
+  button {
+    font-size: 2rem;
+    font-weight: 100;
+    margin: 0;
+    border-radius: 0.5rem;
+    background: black;
+    color: white;
+    border: none;
   }
 </style>
 
@@ -93,7 +106,6 @@
 {#if isModalOpen}
   <Modal on:close={resetQuiz}>
     <h2>You Won!</h2>
-    <p>Congratulations</p>
     <button on:click={resetQuiz}>Start Over</button>
   </Modal>
 {/if}

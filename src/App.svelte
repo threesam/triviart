@@ -1,5 +1,7 @@
 <script>
   import Quiz from './Quiz.svelte'
+  import Categories from './Categories.svelte'
+  import Nav from './Nav.svelte'
 </script>
 
 <style>
@@ -7,13 +9,10 @@
     max-width: 800px;
     margin: 0 auto;
   }
-  h1 {
-    text-align: center;
-    font-size: 4rem;
-  }
 </style>
 
+<Nav />
 <div>
-  <h1>Quiz Meh</h1>
+  <!-- <Categories /> -->
   <Quiz />
 </div>

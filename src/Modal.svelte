@@ -1,8 +1,8 @@
 <script>
   import { fly, fade } from 'svelte/transition'
   import { createEventDispatcher } from 'svelte'
-
-  const dispatch = createEventDispatcher()
+  import P5Canvas from './P5Canvas.svelte'
+  import sketch from './sketch.js'
 </script>
 
 <style lang="scss">
@@ -16,16 +16,19 @@
     display: grid;
     place-content: center;
     .modal {
+      display: grid;
+      place-content: center;
       background: white;
-      padding: 20px;
+      padding: 1rem;
       border-radius: 15px;
+      z-index: 10;
     }
   }
 </style>
 
 <div class="modal-bg" transition:fade>
   <div class="modal" transition:fly={{ y: 200 }}>
-    <button on:click={() => dispatch('close')}>Close</button>
     <slot />
   </div>
+  <P5Canvas id="p5-home" {sketch} />
 </div>
