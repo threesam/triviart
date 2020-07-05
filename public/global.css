@@ -19,6 +19,10 @@ body {
     background: var(--green);
 }
 
+canvas {
+	display: block;
+}
+
 a {
 	color: rgb(0,100,200);
 	text-decoration: none;
