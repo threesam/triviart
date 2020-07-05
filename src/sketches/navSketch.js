@@ -14,7 +14,7 @@ const sketch = (p5) => {
         //
         //map background to dark abyss
         //
-        p5.background(20)
+        p5.background(10, 16, 8)
         particles.forEach((p, index) => {
             //slice and start checking from index
             p.update()
@@ -81,7 +81,7 @@ const sketch = (p5) => {
                     //
                     //if below threshold, glow in the dark
                     //
-                    p5.stroke(20, 150, 20, mapA)
+                    p5.stroke(140, 172, 137, mapA)
                     p5.strokeWeight(2)
                     p5.line(this.pos.x, this.pos.y, particle.pos.x, particle.pos.y)
                 }

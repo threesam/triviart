@@ -15,7 +15,8 @@ body {
 	padding: 0;
 	box-sizing: border-box;
 	font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
-	background: rgb(125, 129, 125);
+	font-family: monospace;
+    background: var(--green);
 }
 
 a {
@@ -54,11 +55,22 @@ input[type="range"] {
 	height: 0;
 }
 
-button {
+/* button {
 	color: #333;
 	background-color: #f4f4f4;
 	outline: none;
-}
+} */
+
+button {
+    font-size: 1.2rem;
+	font-weight: 300;
+	padding: 1rem;
+    margin: 0;
+    border-radius: 0.5rem;
+    background: var(--black);
+    color: var(--light-grey);
+    border: none;
+  }
 
 button:disabled {
 	color: #999;
@@ -71,3 +83,9 @@ button:not(:disabled):active {
 button:focus {
 	border-color: #666;
 }
+
+@media (min-width: 800px) {
+    button {
+      margin: 0;
+    }
+  }

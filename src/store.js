@@ -1,4 +1,8 @@
 import { writable } from 'svelte/store'
 
-export const score = writable(0)
+// CONTROLS
+export const showQuiz = writable(false)
+export const showCategories = writable(true)
 export const activeCategory = writable(9)
+
+export const score = writable(0)

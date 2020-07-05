@@ -1,8 +1,7 @@
 <script>
   import { fly, fade } from 'svelte/transition'
-  import { createEventDispatcher } from 'svelte'
   import P5Canvas from './P5Canvas.svelte'
-  import sketch from './sketch.js'
+  import sketch from './sketches/sketch.js'
 </script>
 
 <style lang="scss">
@@ -12,14 +11,15 @@
     left: 0;
     bottom: 0;
     right: 0;
-    background: rgba(0, 0, 0, 0.8);
+    background: rgba(var(--dark-grey-rgb), 0.8);
     display: grid;
     place-content: center;
     .modal {
       display: grid;
       place-content: center;
       background: white;
-      padding: 1rem;
+      padding: 2rem;
+      margin: 1rem;
       border-radius: 15px;
       z-index: 10;
     }
